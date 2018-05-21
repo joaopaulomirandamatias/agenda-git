@@ -19,6 +19,8 @@ class Contatos extends TPage
                        
         parent::add($this->form);    
         
+        // teste do GitHub
+        
               
                      
     }
