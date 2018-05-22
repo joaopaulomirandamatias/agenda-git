@@ -56,7 +56,9 @@ class CadastroDeContatos extends TPage
     {
      try{
            TTransaction::open('agenda');
-           $dados = $this->form->getData('Contatos','endereco'); //pessoa
+           $dados = $this->form->getData('Contatos');
+           $dados->store();
+           $dados = $this->form->getData('endereco');
            $dados->store();
            new TMessage('info','Dados armazenados com sucesso!');
            $this->form->setData($dados);
@@ -73,4 +75,5 @@ class CadastroDeContatos extends TPage
     }
     
    }
+    
 }
